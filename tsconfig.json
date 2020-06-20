@@ -23,7 +23,16 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
-    "skipDefaultLibCheck": true
+    "skipDefaultLibCheck": true,
+    "baseUrl": "./src",
+    "paths": {
+      "*": [
+        "*"
+      ],
+      "~/*": [
+        "*"
+      ]
+    }
   },
   "include": [
     "./src"

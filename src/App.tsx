@@ -1,18 +1,16 @@
 /** @jsx jsx */
-import React from 'react'
-import ThemeProvider, { Reset } from './theme'
+import ThemeProvider from './theme'
 import { jsx, Container, Styled as S } from 'theme-ui'
+import { Icon } from './lib/icons'
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <ThemeProvider>
-        <Container sx={{ p: 3 }}>
-          <Reset />
-          <S.h1 sx={{ color: 'primary', mb: 3 }}>Hello Theme UI</S.h1>
-          <S.p>Start editing to see some magic happen!</S.p>
-        </Container>
-      </ThemeProvider>
-    )
-  }
+export default function App() {
+  return (
+    <ThemeProvider>
+      <Container sx={{ p: 3 }}>
+        <S.h1 sx={{ color: 'primary', mb: 3 }}>Hello Theme UI</S.h1>
+        <S.p>Start editing to see some magic happen!</S.p>
+        <Icon.Server />
+      </Container>
+    </ThemeProvider>
+  )
 }
